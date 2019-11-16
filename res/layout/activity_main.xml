@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/stackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toEndOf="@+id/box1"
+        app:layout_constraintTop_toBottomOf="@+id/targetText" />
+
+    <TextView
+        android:id="@+id/box1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your stack:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBaseline_toBaselineOf="@+id/stackText"
+        app:layout_constraintStart_toStartOf="@+id/bankText" />
+
+    <TextView
+        android:id="@+id/bankText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="28dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/pushButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="39dp"
+        android:text="Push!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/popBotton"
+        app:layout_constraintEnd_toEndOf="@+id/printText" />
+
+    <Button
+        android:id="@+id/passButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="239dp"
+        android:backgroundTint="#00633B3B"
+        android:text="Pass!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/resetButton" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:text="Your taget:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBaseline_toBaselineOf="@+id/targetText"
+        app:layout_constraintStart_toStartOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/targetText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/stackText"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/popBotton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:text="Pop!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/resetButton"
+        app:layout_constraintEnd_toStartOf="@+id/resetButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/resetButton" />
+
+    <TextView
+        android:id="@+id/printText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="36dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/pushButton"
+        app:layout_constraintStart_toEndOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Printout:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="@+id/popBotton"
+        app:layout_constraintStart_toStartOf="@+id/popBotton"
+        app:layout_constraintTop_toTopOf="@+id/printText" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:text="Anagram Decription"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toStartOf="@+id/targetText"
+        app:layout_constraintStart_toStartOf="@+id/targetText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="12dp"
+        android:text="Reset!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/popBotton"
+        app:layout_constraintTop_toBottomOf="@+id/passButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
